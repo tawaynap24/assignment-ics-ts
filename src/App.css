@@ -194,6 +194,11 @@ input {
   background: orange;
 }
 
+.itemText{
+  padding: 0 0 0 10px;
+   width: 100%;
+}
+
 .itemName {
   font-family: "Kanit";
   font-style: normal;
@@ -240,6 +245,9 @@ input {
 .itemImg img {
   width: 120px;
   height: 120px;
+}
+.slideImg{
+  display: none;
 }
 .next {
   width: 100%;
@@ -507,31 +515,34 @@ input {
 .menu img{
   position: fixed;
   width: 40px;
-  transform: translate(30px,-15px);
+  transform: translate(45px,-15px);
 }
 .placelist span{
+  transform: translateY(-40px);
   font-size: 20px;
   margin: 0 0 0 25px;
 }
 .placelist{
-  top:40px
+  z-index: 2;
+  top:40px;
+  height:160px;
 }
 .select{
   position: absolute;
-  width: 375px;
-  transform: translate(-400px,40px);
+  width: 400px;
+  transform: translate(-400px,0px);
 }
 input{
   position: absolute;
-  width: 375px;
-  transform: translate(-410px,70px);
+  width: 400px;
+  transform: translate(-410px,30px);
   margin: 0 25px 0 10px;
 }
 .bar{
   display: none;
 }
 .itemList{
-  padding: 210px 25px 0px 25px;
+  padding: 220px 25px 0px 25px;
 }
 .navDown{
   margin: 0 25px 0 0;
@@ -540,19 +551,19 @@ input{
   display: block;
 }
 .item{
-  width: 375px;
-  height: 300px;
+  width: 400px;
+  height: 350px;
   padding: 0px;
 }
 .itemIcon{
-  width:375px;
-  height:150px;
+  width:400px;
+  height:125px;
 }
 .search button{
   position: absolute;
 }
 .search-icon{
-  transform: translate(10px,70px);
+  transform: translate(30px,30px);
 }
 .showDetail{
   padding: 80px 35px 30px 30px;
@@ -575,24 +586,115 @@ input{
   margin: 0;
   transform: translate(-60px,20px);
 }
+.itemText{
+  position: absolute;
+  transform: translateY(90px);
 }
+.itemName{
+  font-size: 20px;
+}
+.itemDate{
+  font-size: 16px;;
+}
+.rateIcon{
+display: none;
+}
+.itemRate{
+position: absolute;
+width: 60px;
+height: 30px;
+color: white;
+font-size:18px;
+padding: 6px 20px;
+background: #134B8A;
+border-radius: 30px;
+transform: translate(-140px,-40px);
+}
+.itemImg{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+transform: translateY(50px);
+}
+.itemImg img{
+  display: none;
+}
+.slideImg{
+  display: block;
+}
+.slideImg img{
+  z-index: 1;
+  position: absolute;
+  width: 350px;
+  height: 150px;
+  transform: translate(25px,40px);
+  border-radius: 10px;
+}
+.imgButton{
+  display: flex;
+  justify-content: space-between;
+  transform: translate(-25px,70px);
+}
+.pageButton{
+  width: 0px;
+  height: 0px;
+  z-index: 3;
+}
+.next span{
+  z-index: 2;
+}
+.next button{
+  padding: 20px;
+  transform: translate(-25px,-45px);
+}
+}
+
 @media  only screen and (max-width:375px) {
+  .deLeft img{
+    width: 250px;
+  }
+  .textpad{
+    padding: 0 6px;
+    width: 250px;
+  }
   .select{
-    width: 325px;
-    transform: translate(-350px,40px);
+    width: 350px;
+    transform: translate(-350px,0px);
   }
   input{
     position: absolute;
-    width: 325px;
-    transform: translate(-360px,70px);
+    width: 350px;
+    transform: translate(-360px,30px);
     margin: 0 25px 0 10px;
   }
   .itemIcon{
-    width: 325px;
+    width: 350px;
   }
   .itemImg img{
-    width: 325px;
+    width:350px;
   }
+  .search-icon{
+    transform: translate(30px,30px);
+  }
+  .itemRate{
+    transform: translate(-130px,-40px);
+  }
+  .menu img {
+    position: fixed;
+    width: 40px;
+    transform: translate(45px,-15px);
+}
+.slideImg img{
+  z-index: 1;
+  position: absolute;
+  width: 325px;
+  height: 150px;
+  transform: translate(12.5px,40px);
+
+}
+.item {
+  width:350px;
+}
 }
 @font-face {
   font-family: Kanit;
