@@ -79,7 +79,7 @@ const getSearch = (getIt:any) => {
                     : dataFilter
                   ).map((e:any,index:any) => {
             return (
-              <Link to={"/detail/"+"3"} key={index}>
+              <Link to={"/detail/"+e.id} key={index}>
                 <Item detail={e} />
               </Link>
             );

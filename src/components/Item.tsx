@@ -37,7 +37,7 @@ export default function Item({ detail }: props) {
           <span className="itemName">{detail.name}</span>
           <div className="flexS">
             <span className="itemDate">
-              {detail.operation_time[daynum.getDay() - 1].time_close} AM -
+              {detail.operation_time[daynum.getDay() - 1].time_open} AM -
               {detail.operation_time[daynum.getDay() - 1].time_close} PM
             </span>
             <div className="flex">
